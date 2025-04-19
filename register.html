@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация класса</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // JS‑перенаправление после отправки формы
+    function handleSubmit(e){
+      // Для прототипа просто переходим на start.html
+      // Реальная отправка на почту:
+      // 1) заменить action на backend‑скрипт ИЛИ
+      // 2) использовать сервис Formspree / EmailJS
+      setTimeout(()=>{ window.location.href='start.html'; }, 100);
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <a href="index.html"><img src="assets/logo.png" alt="logo"></a>
+  <h1>Регистрация класса</h1>
+</header>
+
+<main class="card">
+  <form action="mailto:organizer@example.com"
+        method="post"
+        enctype="text/plain"
+        onsubmit="handleSubmit(event)">
+    
+    <div class="form-group">
+      <label>Имя</label>
+      <input name="Имя" required>
+    </div>
+    <div class="form-group">
+      <label>Фамилия</label>
+      <input name="Фамилия" required>
+    </div>
+    <div class="form-group">
+      <label>Класс</label>
+      <input name="Класс" placeholder="например 10‑Б" required>
+    </div>
+    <div class="form-group">
+      <label>Школа</label>
+      <input name="Школа" required>
+    </div>
+    <div class="form-group">
+      <label>Контактные данные (e‑mail / телефон)</label>
+      <input name="Контакты" required>
+    </div>
+
+    <button type="submit">Зарегистрировать ребёнка</button>
+  </form>
+</main>
+
+</body>
+</html>
