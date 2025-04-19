@@ -1,0 +1,106 @@
+/* Шрифты и переменные */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  --green:#347a53;          /* фирменный для кнопок/заголовков */
+  --light:#f7f9fb;
+  --accent:#f5b400;         /* мелкие акценты */
+  --radius:12px;
+}
+
+*,
+*::before,
+*::after {box-sizing:border-box;}
+
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:var(--light);
+  color:#333;
+  line-height:1.5;
+}
+
+a{color:inherit;text-decoration:none;}
+
+header{
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  background:#fff;
+  box-shadow:0 2px 4px rgba(0,0,0,.05);
+}
+
+header img{height:56px;}
+
+main{
+  padding:40px 20px;
+  max-width:1024px;
+  margin:0 auto;
+}
+
+h1,h2{
+  color:var(--green);
+  margin-top:0;
+}
+
+button,.btn{
+  display:inline-block;
+  padding:14px 24px;
+  background:var(--green);
+  color:#fff;
+  border:none;
+  border-radius:var(--radius);
+  font-size:1rem;
+  cursor:pointer;
+  transition:.25s;
+}
+button:hover,.btn:hover{transform:translateY(-2px);}
+
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 4px 12px rgba(0,0,0,.07);
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:16px;
+}
+label{font-weight:600;margin-bottom:6px;}
+input,select{
+  padding:12px 14px;
+  border:1px solid #ddd;
+  border-radius:var(--radius);
+  font-size:1rem;
+}
+
+.grid-3{
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+.direction{
+  text-align:center;
+}
+.direction img{
+  width:72px;
+  margin-bottom:12px;
+}
+
+.test-wrapper{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.test-wrapper p{margin:0;}
+
+.question{
+  background:#fff;
+  padding:16px;
+  border-radius:var(--radius);
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
+}
