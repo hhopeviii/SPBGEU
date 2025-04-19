@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тест: Туризм</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    function afterSend(){
+      setTimeout(()=>{ window.location.href='../choose.html'; },100);
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+  <h1>Тест «Туризм»</h1>
+</header>
+
+<main>
+  <section class="card">
+    <p>Туризм — это организация путешествий и впечатлений для людей. Проверь, насколько тебе интересна эта область!</p>
+  </section>
+
+  <form class="test-wrapper"
+        action="mailto:organizer@example.com"
+        method="post"
+        enctype="text/plain"
+        onsubmit="afterSend()">
+
+    <!-- Вопрос 1 -->
+    <div class="question">
+      <p>1. Какой документ необходим туристу для выезда за границу?</p>
+      <label><input type="radio" name="q1" value="a" required> Паспорт гражданина РФ</label><br>
+      <label><input type="radio" name="q1" value="b"> Загранпаспорт</label>
+    </div>
+
+    <!-- Вопрос 2 -->
+    <div class="question">
+      <p>2. Что из перечисленного входит в понятие «экскурсионное обслуживание»?</p>
+      <label><input type="checkbox" name="q2_guide" value="guide"> Услуги гида</label><br>
+      <label><input type="checkbox" name="q2_transport" value="transport"> Транспортное сопровождение</label><br>
+      <label><input type="checkbox" name="q2_wifi" value="wifi"> Бесплатный Wi‑Fi</label>
+    </div>
+
+    <!-- … добавьте остальные вопросы … -->
+
+    <button type="submit">Отправить тест</button>
+  </form>
+</main>
+
+</body>
+</html>

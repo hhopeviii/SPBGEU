@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тест: Гостеприимство</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    function afterSend(){
+      setTimeout(()=>{ window.location.href='../choose.html'; },100);
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+  <h1>Тест «Гостеприимство»</h1>
+</header>
+
+<main>
+  <section class="card">
+    <p>Гостеприимство — это создание атмосферы уюта и заботы в отелях, ресторанах и мероприятиях. Узнай, подходит ли тебе эта сфера!</p>
+  </section>
+
+  <form class="test-wrapper"
+        action="mailto:organizer@example.com"
+        method="post"
+        enctype="text/plain"
+        onsubmit="afterSend()">
+
+    <!-- Вопрос 1 -->
+    <div class="question">
+      <p>1. Что означает термин «check‑in» в отельной индустрии?</p>
+      <label><input type="radio" name="q1" value="a" required> Процесс оформления гостя при заезде</label><br>
+      <label><input type="radio" name="q1" value="b"> Процесс выселения</label>
+    </div>
+
+    <!-- Вопрос 2 -->
+    <div class="question">
+      <p>2. Какие из перечисленных задач входят в обязанности сотрудника ресепшна?</p>
+      <label><input type="checkbox" name="q2_booking" value="booking"> Бронирование номеров</label><br>
+      <label><input type="checkbox" name="q2_luggage" value="luggage"> Прием багажа гостей</label><br>
+      <label><input type="checkbox" name="q2_cooking" value="cooking"> Приготовление еды на кухне</label>
+    </div>
+
+    <!-- … добавьте остальные вопросы … -->
+
+    <button type="submit">Отправить тест</button>
+  </form>
+</main>
+
+</body>
+</html>

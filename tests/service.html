@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тест: Сервис</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    function afterSend(){
+      setTimeout(()=>{ window.location.href='../choose.html'; },100);
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+  <h1>Тест «Сервис»</h1>
+</header>
+
+<main>
+  <section class="card">
+    <p>Сервис — это искусство создавать комфорт и ценность для клиентов. Проверь, насколько тебе близка эта сфера!</p>
+  </section>
+
+  <form class="test-wrapper"
+        action="mailto:organizer@example.com"
+        method="post"
+        enctype="text/plain"
+        onsubmit="afterSend()">
+
+    <!-- Вопрос 1 -->
+    <div class="question">
+      <p>1. Какой из перечисленных сервисов относится к концепции «wow‑эффекта» для клиента?</p>
+      <label><input type="radio" name="q1" value="a" required> Обычная доставка заказа</label><br>
+      <label><input type="radio" name="q1" value="b"> Личный комплимент и небольшой подарок</label>
+    </div>
+
+    <!-- Вопрос 2 -->
+    <div class="question">
+      <p>2. Какие цифровые технологии сегодня чаще всего повышают качество сервиса?</p>
+      <label><input type="checkbox" name="q2_chatbot" value="chatbot"> Чат‑боты</label><br>
+      <label><input type="checkbox" name="q2_ar" value="ar"> AR‑приложения</label><br>
+      <label><input type="checkbox" name="q2_fax" value="fax"> Факсимильная связь</label>
+    </div>
+
+    <!-- … (добавьте оставшиеся вопросы) … -->
+
+    <button type="submit">Отправить тест</button>
+  </form>
+</main>
+
+</body>
+</html>
